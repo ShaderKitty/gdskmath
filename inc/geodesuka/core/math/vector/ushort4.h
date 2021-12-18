@@ -1,31 +1,60 @@
 #pragma once
-#ifndef GEODESUKA_CORE_MATH_NATURAL4_H
-#define GEODESUKA_CORE_MATH_NATURAL4_H
+#ifndef GEODESUKA_CORE_MATH_USHORT4_H
+#define GEODESUKA_CORE_MATH_USHORT4_H
 
 #include "../config.h"
 
-#include "../numbers/natural.h"
+#include "../number/type.h"
 
-namespace geodesuka::core::math {
-
-	struct natural4 {
-		natural x, y, z, t;
+union ushort4 {
+	struct {
+		ushort x, y, z, t;
 	};
+	struct {
+		ushort r, g, b, a;
+	};
+	ushort ptr[4];
 
-	natural4 operator+(natural4 lhs, natural4 rhs);
-	natural4 operator-(natural4 lhs, natural4 rhs);
-	natural operator*(natural4 lhs, natural4 rhs);
+	ushort4() : x(0u), y(0u), z(0u), t(0u) {}
+	ushort4(ushort A) : x(A), y(A), z(A), t(A) {}
+	ushort4(ushort X, ushort Y, ushort Z, ushort T) : x(X), y(Y), z(Z), t(T) {}
+	
+	// Vector Space Stuff.
+	ushort4&	operator=(ushort aRhs);
+	ushort4&	operator=(const ushort4& aRhs);
+	ushort4&	operator=(ushort4&& aRhs);
 
-	natural4 operator+(natural lhs, natural4 rhs);
-	natural4 operator-(natural lhs, natural4 rhs);
-	natural4 operator*(natural lhs, natural4 rhs);
-	natural4 operator/(natural lhs, natural4 rhs);
+	// Access
+	ushort		operator[](int aIndex) const;
+	ushort&		operator[](int aIndex);
 
-	natural4 operator+(natural4 lhs, natural rhs);
-	natural4 operator-(natural4 lhs, natural rhs);
-	natural4 operator*(natural4 lhs, natural rhs);
-	natural4 operator/(natural4 lhs, natural rhs);
+	// Vector addition and subtraction.
+	ushort4		operator-() const;
+	ushort4		operator+(ushort aRhs) const;
+	ushort4		operator+(ushort4 aRhs) const;
+	ushort4		operator-(ushort aRhs) const;
+	ushort4		operator-(ushort4 aRhs) const;
+	ushort4&	operator+=(ushort aRhs);
+	ushort4&	operator+=(ushort4 aRhs);
+	ushort4&	operator-=(ushort aRhs);
+	ushort4&	operator-=(ushort4 aRhs);
 
-}
+	// Scalar multiplication & division.
+	ushort4		operator*(ushort aRhs) const;
+	ushort4		operator/(ushort aRhs) const;
+	ushort4&	operator*=(ushort aRhs);
+	ushort4&	operator/=(ushort aRhs);
 
-#endif // !GEODESUKA_CORE_MATH_NATURAL4_H
+
+	// Dot Product
+	ushort	operator*(ushort4 aRhs) const;
+	// Cross Product
+	ushort4	operator^(ushort4 aRhs) const;
+
+};
+
+ushort4 operator+(ushort aLhs, ushort4 aRhs);
+ushort4 operator-(ushort aLhs, ushort4 aRhs);
+ushort4 operator*(ushort aLhs, ushort4 aRhs);
+
+#endif // !GEODESUKA_CORE_MATH_USHORT4_H

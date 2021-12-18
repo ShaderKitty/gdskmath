@@ -55,7 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ubyte2.cpp" />
+    <ClCompile Include="src\byte2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\byte3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\byte4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\complex.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -98,10 +106,7 @@
     <ClCompile Include="src\float4x4.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\quaternion.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\multiply.cpp">
+    <ClCompile Include="src\fsupport.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\int2.cpp">
@@ -113,6 +118,36 @@
     <ClCompile Include="src\int4.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\isupport.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\multiply.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\quaternion.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\short2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\short3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\short4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\type.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ubyte2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ubyte3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ubyte4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\uint2.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -122,13 +157,13 @@
     <ClCompile Include="src\uint4.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\fsupport.cpp">
+    <ClCompile Include="src\ushort2.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\isupport.cpp">
+    <ClCompile Include="src\ushort3.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\type.cpp">
+    <ClCompile Include="src\ushort4.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -137,7 +172,6 @@
     <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ubyte2.h" />
     <ClInclude Include="inc\geodesuka\core\math.h">
       <Filter>inc\geodesuka\core</Filter>
     </ClInclude>

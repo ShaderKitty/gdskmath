@@ -4,7 +4,6 @@
 
 #include "../config.h"
 
-
 union int4 {
 	struct {
 		int x, y, z, t;

@@ -10,15 +10,12 @@
 
 #include "../vector/int2.h"
 
-#include "../number/type.h"
-
 #include "../vector/float2.h"
 #include "../vector/float3.h"
 #include "../vector/float4.h"
 
 #include "float2x2.h"
 #include "float3x3.h"
-
 
 union float4x4 {
 	static const float4x4 I;

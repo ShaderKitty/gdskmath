@@ -14,9 +14,9 @@ typedef char byte;
 //typedef double;
 
 namespace geodesuka::core::math {
+
 	typedef unsigned int natural;
 	typedef signed int integer;
-
 	typedef float real;
 
 	// Apparently windows has their own definitions. 

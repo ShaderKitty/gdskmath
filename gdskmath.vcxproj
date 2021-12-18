@@ -176,6 +176,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\byte2.cpp" />
+    <ClCompile Include="src\byte3.cpp" />
+    <ClCompile Include="src\byte4.cpp" />
     <ClCompile Include="src\complex.cpp" />
     <ClCompile Include="src\constants.cpp" />
     <ClCompile Include="src\float2.cpp" />
@@ -197,11 +200,19 @@
     <ClCompile Include="src\isupport.cpp" />
     <ClCompile Include="src\multiply.cpp" />
     <ClCompile Include="src\quaternion.cpp" />
+    <ClCompile Include="src\short2.cpp" />
+    <ClCompile Include="src\short3.cpp" />
+    <ClCompile Include="src\short4.cpp" />
     <ClCompile Include="src\type.cpp" />
+    <ClCompile Include="src\ubyte2.cpp" />
+    <ClCompile Include="src\ubyte3.cpp" />
+    <ClCompile Include="src\ubyte4.cpp" />
     <ClCompile Include="src\uint2.cpp" />
     <ClCompile Include="src\uint3.cpp" />
     <ClCompile Include="src\uint4.cpp" />
-    <ClCompile Include="ubyte2.cpp" />
+    <ClCompile Include="src\ushort2.cpp" />
+    <ClCompile Include="src\ushort3.cpp" />
+    <ClCompile Include="src\ushort4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
@@ -244,7 +255,6 @@
     <ClInclude Include="inc\geodesuka\core\math\vector\ushort2.h" />
     <ClInclude Include="inc\geodesuka\core\math\vector\ushort3.h" />
     <ClInclude Include="inc\geodesuka\core\math\vector\ushort4.h" />
-    <ClInclude Include="ubyte2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
