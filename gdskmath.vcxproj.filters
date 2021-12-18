@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bin">
+      <UniqueIdentifier>{0a7f2d3e-33fa-4928-b62e-85b9ac3cac20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{fd19452c-e6df-4b39-bf58-ab8bfeea7124}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{546040b7-ab4c-4bd4-a06e-f39ff91f63f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{41590b42-c512-4bb0-be1e-037db895e0eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{e6163e08-0151-44e5-8272-d4e89c66ad0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="obj">
+      <UniqueIdentifier>{3d934aa7-c757-4d43-9595-417c211ddcc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dep">
+      <UniqueIdentifier>{212517cd-24b1-408e-bfe0-66987a048aae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{fbf8ebfc-2b32-4ba0-8cc9-76a32c0fb4a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bld">
+      <UniqueIdentifier>{951c5e19-b666-4dfb-83d1-7192e76b0b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka">
+      <UniqueIdentifier>{19df64e2-057b-448c-803a-5dcdb5c0e057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka\core">
+      <UniqueIdentifier>{6aa1b7ee-6c84-4ee3-a4f8-9ec0617d527b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka\core\math">
+      <UniqueIdentifier>{adc7421e-6f02-4dfe-a351-884627b8ce73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka\core\math\vector">
+      <UniqueIdentifier>{98a71247-7776-46d5-90c7-503265e44542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka\core\math\field">
+      <UniqueIdentifier>{9ac77636-162f-4e31-ab15-7b3d2165cd75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka\core\math\number">
+      <UniqueIdentifier>{44b8a016-e39a-4e49-b0cc-018867107d59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka\core\math\matrix">
+      <UniqueIdentifier>{c606d15a-a625-4c0f-9605-dd1daef21211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\geodesuka\core\math\util">
+      <UniqueIdentifier>{88a69562-f5e6-4488-b3ca-38a0099dcbf9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ubyte2.cpp" />
+    <ClCompile Include="src\complex.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\constants.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float2x2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float2x3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float2x4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float3x2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float3x3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float3x4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float4x2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float4x3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\float4x4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\quaternion.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\multiply.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\int2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\int3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\int4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uint2.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uint3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\uint4.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fsupport.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\isupport.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\type.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ubyte2.h" />
+    <ClInclude Include="inc\geodesuka\core\math.h">
+      <Filter>inc\geodesuka\core</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\config.h">
+      <Filter>inc\geodesuka\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix.h">
+      <Filter>inc\geodesuka\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\number.h">
+      <Filter>inc\geodesuka\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector.h">
+      <Filter>inc\geodesuka\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\number\complex.h">
+      <Filter>inc\geodesuka\core\math\number</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\number\constants.h">
+      <Filter>inc\geodesuka\core\math\number</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\number\quaternion.h">
+      <Filter>inc\geodesuka\core\math\number</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\number\type.h">
+      <Filter>inc\geodesuka\core\math\number</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\float2.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\float3.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\float4.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\int2.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\int3.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\int4.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\ubyte2.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\ubyte3.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\ubyte4.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\uint2.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\uint3.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\uint4.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\ushort2.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\ushort3.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\vector\ushort4.h">
+      <Filter>inc\geodesuka\core\math\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float2x2.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float2x3.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float2x4.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float3x2.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float3x3.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float3x4.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float4x2.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float4x3.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\float4x4.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\matrix\multiply.h">
+      <Filter>inc\geodesuka\core\math\matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\util\fsupport.h">
+      <Filter>inc\geodesuka\core\math\util</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\geodesuka\core\math\util\isupport.h">
+      <Filter>inc\geodesuka\core\math\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
