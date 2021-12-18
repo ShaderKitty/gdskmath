@@ -8,18 +8,17 @@
 #include <geodesuka/core/math/vector/float3.h>
 #include <geodesuka/core/math/vector/float4.h>
 
-namespace geodesuka::core::math {
 
 	float2x3::float2x3(const float2x3& Arg) {
-		memcpy(this->ptr, Arg.ptr, 2 * 3 * sizeof(real));
+		memcpy(this->ptr, Arg.ptr, 2 * 3 * sizeof(float));
 	}
 
 	float2x3& float2x3::operator=(const float2x3& Rhs) {
-		memcpy(this->ptr, Rhs.ptr, 2 * 3 * sizeof(real));
+		memcpy(this->ptr, Rhs.ptr, 2 * 3 * sizeof(float));
 		return *this;
 	}
 
-	real float2x3::operator()(integer RowElement, integer ColumnElement) const {
+	float float2x3::operator()(int RowElement, int ColumnElement) const {
 #ifdef ROW_MAJOR_MEMORY_LAYOUT
 		// Row Major Memory Layout
 		return this->aptr[RowElement - 1][ColumnElement - 1];
@@ -29,7 +28,7 @@ namespace geodesuka::core::math {
 #endif // !ROW_MAJOR_MEMORY_LAYOUT
 	}
 
-	real& float2x3::operator()(integer RowElement, integer ColumnElement) {
+	float& float2x3::operator()(int RowElement, int ColumnElement) {
 #ifdef ROW_MAJOR_MEMORY_LAYOUT
 		// Row Major Memory Layout
 		return this->aptr[RowElement - 1][ColumnElement - 1];
@@ -41,7 +40,7 @@ namespace geodesuka::core::math {
 
 	float2x3 float2x3::operator-() const {
 		float2x3 temp;
-		for (integer i = 0; i < 2 * 3; i++) {
+		for (int i = 0; i < 2 * 3; i++) {
 			temp.ptr[i] = -this->ptr[i];
 		}
 		return temp;
@@ -49,7 +48,7 @@ namespace geodesuka::core::math {
 
 	float2x3 float2x3::operator+(const float2x3& Rhs) const {
 		float2x3 temp;
-		for (integer i = 0; i < 2 * 3; i++) {
+		for (int i = 0; i < 2 * 3; i++) {
 			temp.ptr[i] = this->ptr[i] + Rhs.ptr[i];
 		}
 		return temp;
@@ -57,21 +56,21 @@ namespace geodesuka::core::math {
 
 	float2x3 float2x3::operator-(const float2x3& Rhs) const {
 		float2x3 temp;
-		for (integer i = 0; i < 2 * 3; i++) {
+		for (int i = 0; i < 2 * 3; i++) {
 			temp.ptr[i] = this->ptr[i] - Rhs.ptr[i];
 		}
 		return temp;
 	}
 
 	float2x3& float2x3::operator+=(const float2x3& Rhs) {
-		for (integer i = 0; i < 2 * 3; i++) {
+		for (int i = 0; i < 2 * 3; i++) {
 			this->ptr[i] += Rhs.ptr[i];
 		}
 		return *this;
 	}
 
 	float2x3& float2x3::operator-=(const float2x3& Rhs) {
-		for (integer i = 0; i < 2 * 3; i++) {
+		for (int i = 0; i < 2 * 3; i++) {
 			this->ptr[i] -= Rhs.ptr[i];
 		}
 		return *this;
@@ -79,26 +78,26 @@ namespace geodesuka::core::math {
 
 	float2 float2x3::operator*(const float3& Rhs) const {
 		float2 temp;
-		for (integer i = 0; i < 2; i++) {
+		for (int i = 0; i < 2; i++) {
 			temp[i] = 0.0;
-			for (integer j = 0; j < 3; j++) {
+			for (int j = 0; j < 3; j++) {
 				temp[i] += (*this)(i, j) * Rhs[j];
 			}
 		}
 		return temp;
 	}
 
-	float2x3 float2x3::operator*(real Rhs) const {
+	float2x3 float2x3::operator*(float Rhs) const {
 		float2x3 temp;
-		for (integer i = 0; i < 2 * 3; i++) {
+		for (int i = 0; i < 2 * 3; i++) {
 			temp.ptr[i] = this->ptr[i] * Rhs;
 		}
 		return temp;
 	}
 
-	float2x3 float2x3::operator/(real Rhs) const {
+	float2x3 float2x3::operator/(float Rhs) const {
 		float2x3 temp;
-		for (integer i = 0; i < 2 * 3; i++) {
+		for (int i = 0; i < 2 * 3; i++) {
 			temp.ptr[i] = this->ptr[i] / Rhs;
 		}
 		return temp;
@@ -115,10 +114,10 @@ namespace geodesuka::core::math {
 	}
 
 #ifdef MATH_ENABLE_IO
-	std::ostream& operator<<(std::ostream& Out, const real2x3& Arg) {
-		for (integer i = 1; i <= 2; i++) {
+	std::ostream& operator<<(std::ostream& Out, const float2x3& Arg) {
+		for (int i = 1; i <= 2; i++) {
 			Out << "| ";
-			for (integer j = 1; j <= 3; j++) {
+			for (int j = 1; j <= 3; j++) {
 				Out << Arg(i, j) << " ";
 			}
 			Out << "|" << std::endl;
@@ -127,4 +126,3 @@ namespace geodesuka::core::math {
 	}
 #endif // MATH_ENABLE_IO
 
-}

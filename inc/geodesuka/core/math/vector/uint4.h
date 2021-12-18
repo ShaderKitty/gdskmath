@@ -6,7 +6,6 @@
 
 #include "../number/type.h"
 
-namespace geodesuka::core::math {
 
 	struct natural4 {
 		natural x, y, z, t;
@@ -25,7 +24,5 @@ namespace geodesuka::core::math {
 	natural4 operator-(natural4 lhs, natural rhs);
 	natural4 operator*(natural4 lhs, natural rhs);
 	natural4 operator/(natural4 lhs, natural rhs);
-
-}
 
 #endif // !GEODESUKA_CORE_MATH_UINT4_H

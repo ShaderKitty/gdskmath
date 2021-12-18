@@ -6,9 +6,8 @@
 #include <iostream>
 #endif // MATH_ENABLE_IO
 
-namespace geodesuka::core::math {
 
-	real float2x4::operator()(integer RowElement, integer ColumnElement) const {
+	float float2x4::operator()(int RowElement, int ColumnElement) const {
 #ifdef ROW_MAJOR_MEMORY_LAYOUT
 		// Row Major Memory Layout
 		return this->aptr[RowElement - 1][ColumnElement - 1];
@@ -18,7 +17,7 @@ namespace geodesuka::core::math {
 #endif // !ROW_MAJOR_MEMORY_LAYOUT
 	}
 
-	real& float2x4::operator()(integer RowElement, integer ColumnElement) {
+	float& float2x4::operator()(int RowElement, int ColumnElement) {
 #ifdef ROW_MAJOR_MEMORY_LAYOUT
 		// Row Major Memory Layout
 		return this->aptr[RowElement - 1][ColumnElement - 1];
@@ -30,7 +29,7 @@ namespace geodesuka::core::math {
 
 	float2x4 float2x4::operator-() const {
 		float2x4 temp;
-		for (integer i = 0; i < 2 * 4; i++) {
+		for (int i = 0; i < 2 * 4; i++) {
 			temp.ptr[i] = this->ptr[i];
 		}
 		return temp;
@@ -38,7 +37,7 @@ namespace geodesuka::core::math {
 
 	float2x4 float2x4::operator+(const float2x4& Rhs) const {
 		float2x4 temp;
-		for (integer i = 0; i < 2 * 4; i++) {
+		for (int i = 0; i < 2 * 4; i++) {
 			temp.ptr[i] = this->ptr[i] + Rhs.ptr[i];
 		}
 		return temp;
@@ -46,21 +45,21 @@ namespace geodesuka::core::math {
 
 	float2x4 float2x4::operator-(const float2x4& Rhs) const {
 		float2x4 temp;
-		for (integer i = 0; i < 2 * 4; i++) {
+		for (int i = 0; i < 2 * 4; i++) {
 			temp.ptr[i] = this->ptr[i] - Rhs.ptr[i];
 		}
 		return temp;
 	}
 
 	float2x4& float2x4::operator+=(const float2x4& Rhs) {
-		for (integer i = 0; i < 2 * 4; i++) {
+		for (int i = 0; i < 2 * 4; i++) {
 			this->ptr[i] += Rhs.ptr[i];
 		}
 		return *this;
 	}
 
 	float2x4& float2x4::operator-=(const float2x4& Rhs) {
-		for (integer i = 0; i < 2 * 4; i++) {
+		for (int i = 0; i < 2 * 4; i++) {
 			this->ptr[i] += Rhs.ptr[i];
 		}
 		return *this;
@@ -68,26 +67,26 @@ namespace geodesuka::core::math {
 
 	float2 float2x4::operator*(const float4& Rhs) const {
 		float2 temp;
-		for (integer i = 0; i < 2; i++) {
+		for (int i = 0; i < 2; i++) {
 			temp.ptr[i] = 0.0;
-			for (integer j = 0; j < 4; j++) {
+			for (int j = 0; j < 4; j++) {
 				temp.ptr[i] += (*this)(i + 1, j + 1) * Rhs.ptr[j];
 			}
 		}
 		return temp;
 	}
 
-	float2x4 float2x4::operator*(real Rhs) const {
+	float2x4 float2x4::operator*(float Rhs) const {
 		float2x4 temp;
-		for (integer i = 0; i < 2 * 4; i++) {
+		for (int i = 0; i < 2 * 4; i++) {
 			temp.ptr[i] = this->ptr[i] * Rhs;
 		}
 		return temp;
 	}
 
-	float2x4 float2x4::operator/(real Rhs) const {
+	float2x4 float2x4::operator/(float Rhs) const {
 		float2x4 temp;
-		for (integer i = 0; i < 2 * 4; i++) {
+		for (int i = 0; i < 2 * 4; i++) {
 			temp.ptr[i] = this->ptr[i] / Rhs;
 		}
 		return temp;
@@ -104,11 +103,11 @@ namespace geodesuka::core::math {
 	}
 
 #ifdef MATH_ENABLE_IO
-	std::ostream& operator<<(std::ostream& Out, const real2x4& Arg)
+	std::ostream& operator<<(std::ostream& Out, const float2x4& Arg)
 	{
-		for (integer i = 1; i <= 2; i++) {
+		for (int i = 1; i <= 2; i++) {
 			Out << "| ";
-			for (integer j = 1; j <= 4; j++) {
+			for (int j = 1; j <= 4; j++) {
 				Out << Arg(i, j) << " ";
 			}
 			Out << "|" << std::endl;
@@ -116,5 +115,3 @@ namespace geodesuka::core::math {
 		return Out;
 	}
 #endif // MATH_ENABLE_IO
-
-}

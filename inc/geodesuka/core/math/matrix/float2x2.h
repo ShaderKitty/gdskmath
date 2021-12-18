@@ -1,6 +1,6 @@
 #pragma once
-#ifndef GEODESUKA_CORE_MATH_REAL2X2_H
-#define GEODESUKA_CORE_MATH_REAL2X2_H
+#ifndef GEODESUKA_CORE_MATH_FLOAT2X2_H
+#define GEODESUKA_CORE_MATH_FLOAT2X2_H
 
 #include "../config.h"
 
@@ -19,25 +19,25 @@
 #ifdef ROW_MAJOR_MEMORY_LAYOUT
 		// Row Major Memory Layout
 		struct {
-			real xx, xy;
-			real yx, yy;
+			float xx, xy;
+			float yx, yy;
 		};
 #endif
 
 #ifdef COL_MAJOR_MEMORY_LAYOUT
 		// Column Major Memory Layout
 		struct {
-			real xx, yx;
-			real xy, yy;
+			float xx, yx;
+			float xy, yy;
 		};
 #endif
 		//struct {
-		//	real2 x;
-		//	real2 y;
+		//	float2 x;
+		//	float2 y;
 		//};
-		//real2 vptr[2];
-		real aptr[2][2];
-		real ptr[2 * 2];
+		//float2 vptr[2];
+		float aptr[2][2];
+		float ptr[2 * 2];
 
 
 		float2x2() :
@@ -45,8 +45,8 @@
 			yx(0.0), yy(0.0)
 		{}
 		float2x2(
-			real XX, real XY,
-			real YX, real YY
+			float XX, float XY,
+			float YX, float YY
 		) :
 			xx(XX), xy(XY),
 			yx(YX), yy(YY)
@@ -54,8 +54,8 @@
 		~float2x2() {}
 
 		// Access elements of matrix in standard notation.
-		real operator()(integer RowElement, integer ColumnElement) const;
-		real& operator()(integer RowElement, integer ColumnElement);
+		float operator()(int RowElement, int ColumnElement) const;
+		float& operator()(int RowElement, int ColumnElement);
 
 		float2x2 operator-() const;
 		float2x2 operator+(const float2x2& Rhs) const;
@@ -67,27 +67,27 @@
 		float2x2 operator*=(const float2x2& Rhs);
 
 		float2 operator*(const float2& Rhs) const;
-		float2x2 operator*(real Rhs) const;
-		float2x2 operator/(real Rhs) const;
+		float2x2 operator*(float Rhs) const;
+		float2x2 operator/(float Rhs) const;
 
-		//real sub(integer RowElement, integer ColumnElement) const;
+		//float sub(integer RowElement, integer ColumnElement) const;
 		void setr(const float2& Row1, const float2& Row2);
 		void setc(const float2& Col1, const float2& Col2);
 
 	};
 
 	float2 operator*(const float2& Lhs, const float2x2& Rhs);
-	float2x2 operator*(real Lhs, const float2x2& Rhs);
+	float2x2 operator*(float Lhs, const float2x2& Rhs);
 
-	real det(const float2x2& Arg);
-	real tr(const float2x2& Arg);
+	float det(const float2x2& Arg);
+	float tr(const float2x2& Arg);
 	float2x2 transpose(const float2x2& Arg);
 	float2x2 inverse(const float2x2& Arg);
 
 #ifdef MATH_ENABLE_IO
-	std::ostream& operator<<(std::ostream& Out, const real2x2& Arg);
+	std::ostream& operator<<(std::ostream& Out, const float2x2& Arg);
 #endif // MATH_ENABLE_IO
 
 
-#endif // !GEODESUKA_CORE_MATH_REAL2X2_H
+#endif // !GEODESUKA_CORE_MATH_FLOAT2X2_H
 

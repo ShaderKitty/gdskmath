@@ -4,7 +4,6 @@
 
 #include "../config.h"
 
-namespace geodesuka::core::math {
 
 	union int4 {
 		struct {
@@ -64,7 +63,5 @@ namespace geodesuka::core::math {
 #ifdef CS_PLEB_NOTATION
 	int4 operator/(int Lhs, const int4& Rhs);
 #endif // CS_PLEB_NOTATION
-
-}
 
 #endif // !GEODESUKA_CORE_MATH_INT4_H

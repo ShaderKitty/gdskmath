@@ -10,7 +10,6 @@
 //	integer x, y, z;
 //};
 
-namespace geodesuka::core::math {
 
 	union int3 {
 		struct {
@@ -72,7 +71,5 @@ namespace geodesuka::core::math {
 #ifdef CS_PLEB_NOTATION
 	integer3 operator/(integer Lhs, const integer3& Rhs);
 #endif // CS_PLEB_NOTATION
-
-}
 
 #endif // !GEODESUKA_CORE_MATH_INTEGER3_H

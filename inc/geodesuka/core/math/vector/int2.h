@@ -6,7 +6,6 @@
 
 #include "../number/type.h"
 
-namespace geodesuka::core::math {
 
 	union int2 {
 		struct {
@@ -67,7 +66,5 @@ namespace geodesuka::core::math {
 #ifdef CS_PLEB_NOTATION
 	integer2 operator/(integer Lhs, const integer2& Rhs);
 #endif // CS_PLEB_NOTATION
-
-}
 
 #endif // !GEODESUKA_CORE_MATH_INTEGER2_H

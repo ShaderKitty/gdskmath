@@ -19,45 +19,44 @@
 #include "../matrix/float4x3.h"
 #include "../matrix/float4x4.h"
 
-	//real2x2 operator*(real2x2 Lhs, real2x2 Rhs);
-	float2x3 operator*(float2x2 Lhs, float2x3 Rhs);
-	float2x4 operator*(float2x2 Lhs, float2x4 Rhs);
+//real2x2 operator*(real2x2 Lhs, real2x2 Rhs);
+float2x3 operator*(float2x2 Lhs, float2x3 Rhs);
+float2x4 operator*(float2x2 Lhs, float2x4 Rhs);
 
-	float2x2 operator*(float2x3 Lhs, float3x2 Rhs);
-	float2x3 operator*(float2x3 Lhs, float3x3 Rhs);
-	float2x4 operator*(float2x3 Lhs, float3x4 Rhs);
+float2x2 operator*(float2x3 Lhs, float3x2 Rhs);
+float2x3 operator*(float2x3 Lhs, float3x3 Rhs);
+float2x4 operator*(float2x3 Lhs, float3x4 Rhs);
 
-	float2x2 operator*(float2x4 Lhs, float4x2 Rhs);
-	float2x3 operator*(float2x4 Lhs, float4x3 Rhs);
-	float2x4 operator*(float2x4 Lhs, float4x4 Rhs);
-
-
-
-	float3x2 operator*(float3x2 Lhs, float2x2 Rhs);
-	float3x3 operator*(float3x2 Lhs, float2x3 Rhs);
-	float3x4 operator*(float3x2 Lhs, float2x4 Rhs);
-
-	float3x2 operator*(float3x3 Lhs, float3x2 Rhs);
-	//real3x3 operator*(real3x3 Lhs, real3x3 Rhs);
-	float3x4 operator*(float3x3 Lhs, float3x4 Rhs);
-
-	float3x2 operator*(float3x4 Lhs, float4x2 Rhs);
-	float3x3 operator*(float3x4 Lhs, float4x3 Rhs);
-	float3x4 operator*(float3x4 Lhs, float4x4 Rhs);
+float2x2 operator*(float2x4 Lhs, float4x2 Rhs);
+float2x3 operator*(float2x4 Lhs, float4x3 Rhs);
+float2x4 operator*(float2x4 Lhs, float4x4 Rhs);
 
 
 
-	float4x2 operator*(float4x2 Lhs, float2x2 Rhs);
-	float4x3 operator*(float4x2 Lhs, float2x3 Rhs);
-	float4x4 operator*(float4x2 Lhs, float2x4 Rhs);
+float3x2 operator*(float3x2 Lhs, float2x2 Rhs);
+float3x3 operator*(float3x2 Lhs, float2x3 Rhs);
+float3x4 operator*(float3x2 Lhs, float2x4 Rhs);
 
-	float4x2 operator*(float4x3 Lhs, float3x2 Rhs);
-	float4x3 operator*(float4x3 Lhs, float3x3 Rhs);
-	float4x4 operator*(float4x3 Lhs, float3x4 Rhs);
+float3x2 operator*(float3x3 Lhs, float3x2 Rhs);
+//real3x3 operator*(real3x3 Lhs, real3x3 Rhs);
+float3x4 operator*(float3x3 Lhs, float3x4 Rhs);
 
-	float4x2 operator*(float4x4 Lhs, float4x2 Rhs);
-	float4x3 operator*(float4x4 Lhs, float4x3 Rhs);
-	//real4x4 operator*(real4x4 Lhs, real4x4 Rhs);
+float3x2 operator*(float3x4 Lhs, float4x2 Rhs);
+float3x3 operator*(float3x4 Lhs, float4x3 Rhs);
+float3x4 operator*(float3x4 Lhs, float4x4 Rhs);
 
+
+
+float4x2 operator*(float4x2 Lhs, float2x2 Rhs);
+float4x3 operator*(float4x2 Lhs, float2x3 Rhs);
+float4x4 operator*(float4x2 Lhs, float2x4 Rhs);
+
+float4x2 operator*(float4x3 Lhs, float3x2 Rhs);
+float4x3 operator*(float4x3 Lhs, float3x3 Rhs);
+float4x4 operator*(float4x3 Lhs, float3x4 Rhs);
+
+float4x2 operator*(float4x4 Lhs, float4x2 Rhs);
+float4x3 operator*(float4x4 Lhs, float4x3 Rhs);
+//real4x4 operator*(real4x4 Lhs, real4x4 Rhs);
 
 #endif // !GEODESUKA_CORE_MATH_MATRIX_MULTIPLY_H
