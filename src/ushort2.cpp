@@ -1,4 +1,4 @@
-#include <geodesuka/core/math/vector/uint2.h>
+#include <geodesuka/core/math/vector/ushort2.h>
 
 #include <limits.h>
 

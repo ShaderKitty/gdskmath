@@ -1,4 +1,4 @@
-#include <geodesuka/core/math/vector/uint4.h>
+#include <geodesuka/core/math/vector/ubyte4.h>
 
 #include <limits.h>
 

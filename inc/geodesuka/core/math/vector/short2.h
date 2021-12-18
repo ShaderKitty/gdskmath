@@ -1,6 +1,6 @@
 #pragma once
-#ifndef GEODESUKA_CORE_MATH_UBYTE2_H
-#define GEODESUKA_CORE_MATH_UBYTE2_H
+#ifndef GEODESUKA_CORE_MATH_SHORT2_H
+#define GEODESUKA_CORE_MATH_SHORT2_H
 
 #include "../config.h"
 

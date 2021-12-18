@@ -1,6 +1,6 @@
 #pragma once
-#ifndef GEODESUKA_CORE_MATH_UBYTE2_H
-#define GEODESUKA_CORE_MATH_UBYTE2_H
+#ifndef GEODESUKA_CORE_MATH_BYTE2_H
+#define GEODESUKA_CORE_MATH_BYTE2_H
 
 #include "../config.h"
 
@@ -20,4 +20,4 @@ union ubyte2 {
 };
 
 
-#endif // !GEODESUKA_CORE_MATH_UBYTE2_H
+#endif // !GEODESUKA_CORE_MATH_BYTE2_H
