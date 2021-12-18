@@ -8,7 +8,6 @@
 #include <iostream>
 #endif // MATH_ENABLE_IO
 
-#include "../number/type.h"
 #include "../vector/float2.h"
 #include "../vector/float3.h"
 #include "../vector/float4.h"
