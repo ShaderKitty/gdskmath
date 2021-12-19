@@ -22,22 +22,22 @@ union uint4 {
 	// Vector Space Stuff.
 	uint4&	operator=(uint aRhs);
 	uint4&	operator=(const uint4& aRhs);
-	uint4&	operator=(uint4&& aRhs);
+	uint4&	operator=(uint4&& aRhs) noexcept;
 
 	// Access
 	uint	operator[](int aIndex) const;
 	uint&	operator[](int aIndex);
 
 	// Vector addition and subtraction.
-	uint4	operator-() const;
+	//uint4	operator-() const;
 	uint4	operator+(uint aRhs) const;
-	uint4	operator+(uint4 aRhs) const;
+	uint4	operator+(const uint4& aRhs) const;
 	uint4	operator-(uint aRhs) const;
-	uint4	operator-(uint4 aRhs) const;
+	uint4	operator-(const uint4& aRhs) const;
 	uint4&	operator+=(uint aRhs);
-	uint4&	operator+=(uint4 aRhs);
+	uint4&	operator+=(const uint4& aRhs);
 	uint4&	operator-=(uint aRhs);
-	uint4&	operator-=(uint4 aRhs);
+	uint4&	operator-=(const uint4& aRhs);
 
 	// Scalar multiplication & division.
 	uint4	operator*(uint aRhs) const;
@@ -47,14 +47,14 @@ union uint4 {
 
 
 	// Dot Product
-	uint	operator*(uint4 aRhs) const;
-	// Cross Product
-	uint4	operator^(uint4 aRhs) const;
+	uint	operator*(const uint4& aRhs) const;
+	// Cross Product (Only exists in 3D)
+	//uint4	operator^(const uint4& aRhs) const;
 
 };
 
-uint4 operator+(uint aLhs, uint4 aRhs);
-uint4 operator-(uint aLhs, uint4 aRhs);
-uint4 operator*(uint aLhs, uint4 aRhs);
+uint4 operator+(uint aLhs, const uint4& aRhs);
+uint4 operator-(uint aLhs, const uint4& aRhs);
+uint4 operator*(uint aLhs, const uint4& aRhs);
 
 #endif // !GEODESUKA_CORE_MATH_UINT4_H

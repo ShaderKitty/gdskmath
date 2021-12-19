@@ -20,24 +20,24 @@ union ushort4 {
 	ushort4(ushort X, ushort Y, ushort Z, ushort T) : x(X), y(Y), z(Z), t(T) {}
 	
 	// Vector Space Stuff.
-	ushort4&	operator=(ushort aRhs);
-	ushort4&	operator=(const ushort4& aRhs);
-	ushort4&	operator=(ushort4&& aRhs);
+	ushort4& operator=(ushort aRhs);
+	ushort4& operator=(const ushort4& aRhs);
+	ushort4& operator=(ushort4&& aRhs) noexcept;
 
 	// Access
-	ushort		operator[](int aIndex) const;
-	ushort&		operator[](int aIndex);
+	ushort	operator[](int aIndex) const;
+	ushort&	operator[](int aIndex);
 
 	// Vector addition and subtraction.
-	ushort4		operator-() const;
+	//ushort4	operator-() const;
 	ushort4		operator+(ushort aRhs) const;
-	ushort4		operator+(ushort4 aRhs) const;
+	ushort4		operator+(const ushort4& aRhs) const;
 	ushort4		operator-(ushort aRhs) const;
-	ushort4		operator-(ushort4 aRhs) const;
+	ushort4		operator-(const ushort4& aRhs) const;
 	ushort4&	operator+=(ushort aRhs);
-	ushort4&	operator+=(ushort4 aRhs);
+	ushort4&	operator+=(const ushort4& aRhs);
 	ushort4&	operator-=(ushort aRhs);
-	ushort4&	operator-=(ushort4 aRhs);
+	ushort4&	operator-=(const ushort4& aRhs);
 
 	// Scalar multiplication & division.
 	ushort4		operator*(ushort aRhs) const;
@@ -47,14 +47,14 @@ union ushort4 {
 
 
 	// Dot Product
-	ushort	operator*(ushort4 aRhs) const;
-	// Cross Product
-	ushort4	operator^(ushort4 aRhs) const;
+	ushort operator*(const ushort4& aRhs) const;
+	// Cross Product (Only exists in 3D)
+	//ushort4	operator^(const ushort4& aRhs) const;
 
 };
 
-ushort4 operator+(ushort aLhs, ushort4 aRhs);
-ushort4 operator-(ushort aLhs, ushort4 aRhs);
-ushort4 operator*(ushort aLhs, ushort4 aRhs);
+ushort4 operator+(ushort aLhs, const ushort4& aRhs);
+ushort4 operator-(ushort aLhs, const ushort4& aRhs);
+ushort4 operator*(ushort aLhs, const ushort4& aRhs);
 
 #endif // !GEODESUKA_CORE_MATH_USHORT4_H

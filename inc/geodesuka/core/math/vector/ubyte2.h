@@ -8,52 +8,53 @@
 
 union ubyte2 {
 	struct {
-		ubyte x, y;
+		ubyte x, y, z, t;
 	};
 	struct {
-		ubyte r, g;
+		ubyte r, g, b, a;
 	};
-	ubyte ptr[2];
+	ubyte ptr[4];
 
-	ubyte2() : x(0u), y(0u) {}
-	ubyte2(ubyte A) : x(A), y(A) {}
-	ubyte2(ubyte X, ubyte Y) : x(X), y(Y) {}
-	
+	ubyte2() : x(0u), y(0u), z(0u), t(0u) {}
+	ubyte2(ubyte A) : x(A), y(A), z(A), t(A) {}
+	ubyte2(ubyte X, ubyte Y, ubyte Z, ubyte T) : x(X), y(Y), z(Z), t(T) {}
+
 	// Vector Space Stuff.
-	ubyte2&		operator=(ubyte aRhs);
-	ubyte2&		operator=(const ubyte2& aRhs);
-	ubyte2&		operator=(ubyte2&& aRhs);
+	ubyte2& operator=(ubyte aRhs);
+	ubyte2& operator=(const ubyte2& aRhs);
+	ubyte2& operator=(ubyte2&& aRhs) noexcept;
 
 	// Access
-	ubyte		operator[](int aIndex) const;
-	ubyte&		operator[](int aIndex);
+	ubyte	operator[](int aIndex) const;
+	ubyte& operator[](int aIndex);
 
 	// Vector addition and subtraction.
-	ubyte2		operator-() const;
-	ubyte2		operator+(ubyte aRhs) const;
-	ubyte2		operator+(ubyte2 aRhs) const;
-	ubyte2		operator-(ubyte aRhs) const;
-	ubyte2		operator-(ubyte2 aRhs) const;
-	ubyte2&		operator+=(ubyte aRhs);
-	ubyte2&		operator+=(ubyte2 aRhs);
-	ubyte2&		operator-=(ubyte aRhs);
-	ubyte2&		operator-=(ubyte2 aRhs);
+	//ubyte2	operator-() const;
+	ubyte2	operator+(ubyte aRhs) const;
+	ubyte2	operator+(const ubyte2& aRhs) const;
+	ubyte2	operator-(ubyte aRhs) const;
+	ubyte2	operator-(const ubyte2& aRhs) const;
+	ubyte2& operator+=(ubyte aRhs);
+	ubyte2& operator+=(const ubyte2& aRhs);
+	ubyte2& operator-=(ubyte aRhs);
+	ubyte2& operator-=(const ubyte2& aRhs);
 
 	// Scalar multiplication & division.
-	ubyte2		operator*(ubyte aRhs) const;
-	ubyte2		operator/(ubyte aRhs) const;
-	ubyte2&		operator*=(ubyte aRhs);
-	ubyte2&		operator/=(ubyte aRhs);
+	ubyte2	operator*(ubyte aRhs) const;
+	ubyte2	operator/(ubyte aRhs) const;
+	ubyte2& operator*=(ubyte aRhs);
+	ubyte2& operator/=(ubyte aRhs);
+
 
 	// Dot Product
-	ubyte		operator*(ubyte2 aRhs) const;
-	// Cross Product
-	ubyte2		operator^(ubyte2 aRhs) const;
+	ubyte operator*(const ubyte2& aRhs) const;
+	// Cross Product (Only exists in 3D)
+	//ubyte2	operator^(const ubyte2& aRhs) const;
 
 };
 
-ubyte2 operator+(ubyte aLhs, ubyte2 aRhs);
-ubyte2 operator-(ubyte aLhs, ubyte2 aRhs);
-ubyte2 operator*(ubyte aLhs, ubyte2 aRhs);
+ubyte2 operator+(ubyte aLhs, const ubyte2& aRhs);
+ubyte2 operator-(ubyte aLhs, const ubyte2& aRhs);
+ubyte2 operator*(ubyte aLhs, const ubyte2& aRhs);
 
 #endif // !GEODESUKA_CORE_MATH_UBYTE2_H
