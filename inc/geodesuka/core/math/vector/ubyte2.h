@@ -8,16 +8,16 @@
 
 union ubyte2 {
 	struct {
-		ubyte x, y, z, t;
+		ubyte x, y;
 	};
 	struct {
-		ubyte r, g, b, a;
+		ubyte r, g;
 	};
-	ubyte ptr[4];
+	ubyte ptr[2];
 
-	ubyte2() : x(0u), y(0u), z(0u), t(0u) {}
-	ubyte2(ubyte A) : x(A), y(A), z(A), t(A) {}
-	ubyte2(ubyte X, ubyte Y, ubyte Z, ubyte T) : x(X), y(Y), z(Z), t(T) {}
+	ubyte2() : x(0u), y(0u) {}
+	ubyte2(ubyte A) : x(A), y(A) {}
+	ubyte2(ubyte X, ubyte Y) : x(X), y(Y) {}
 
 	// Vector Space Stuff.
 	ubyte2& operator=(ubyte aRhs);

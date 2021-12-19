@@ -4,6 +4,8 @@
 
 #include "../config.h"
 
+#include "../number/type.h"
+
 union int4 {
 	struct {
 		int x, y, z, t;
@@ -13,54 +15,46 @@ union int4 {
 	};
 	int ptr[4];
 
-	int4();
-	~int4();
+	int4() : x(0u), y(0u), z(0u), t(0u) {}
+	int4(int A) : x(A), y(A), z(A), t(A) {}
+	int4(int X, int Y, int Z, int T) : x(X), y(Y), z(Z), t(T) {}
+	
+	// Vector Space Stuff.
+	int4&	operator=(int aRhs);
+	int4&	operator=(const int4& aRhs);
+	int4&	operator=(int4&& aRhs) noexcept;
 
-#ifdef CS_PLEB_NOTATION
-	int4(int Arg);
-#endif // CS_PLEB_NOTATION
-	int4(int ArgX, int ArgY, int ArgZ, int ArgT);
-	int4(const int4& Arg);
+	// Access
+	int	operator[](int aIndex) const;
+	int&	operator[](int aIndex);
 
-#ifdef CS_PLEB_NOTATION
-	int4& operator=(int Rhs);
-#endif // CS_PLEB_NOTATION
-	int4& operator=(const int4& Rhs);
+	// Vector addition and subtraction.
+	int4	operator-() const;
+	int4	operator+(int aRhs) const;
+	int4	operator+(const int4& aRhs) const;
+	int4	operator-(int aRhs) const;
+	int4	operator-(const int4& aRhs) const;
+	int4&	operator+=(int aRhs);
+	int4&	operator+=(const int4& aRhs);
+	int4&	operator-=(int aRhs);
+	int4&	operator-=(const int4& aRhs);
 
-	int operator[](int Index) const;
-	int& operator[](int Index);
+	// Scalar multiplication & division.
+	int4	operator*(int aRhs) const;
+	int4	operator/(int aRhs) const;
+	int4&	operator*=(int aRhs);
+	int4&	operator/=(int aRhs);
 
-	int4 operator-() const;
-	int4 operator+(const int4& Rhs) const;
-	int4 operator-(const int4& Rhs) const;
-	int operator*(const int4& Rhs) const;
 
-	int4& operator+=(const int4& Rhs);
-	int4& operator-=(const int4& Rhs);
-
-#ifdef CS_PLEB_NOTATION
-	int4 operator+(int Rhs) const;
-	int4 operator-(int Rhs) const;
-#endif // CS_PLEB_NOTATION
-	int4 operator*(int Rhs) const;
-	int4 operator/(int Rhs) const;
-
-#ifdef CS_PLEB_NOTATION
-	int4& operator+=(int Rhs);
-	int4& operator-=(int Rhs);
-#endif // CS_PLEB_NOTATION
-	int4& operator*=(int Rhs);
-	int4& operator/=(int Rhs);
+	// Dot Product
+	int	operator*(const int4& aRhs) const;
+	// Cross Product (Only exists in 3D)
+	//int4	operator^(const int4& aRhs) const;
 
 };
 
-#ifdef CS_PLEB_NOTATION
-int4 operator+(int Lhs, const int4& Rhs);
-int4 operator-(int Lhs, const int4& Rhs);
-#endif // CS_PLEB_NOTATION
-int4 operator*(int Lhs, const int4& Rhs);
-#ifdef CS_PLEB_NOTATION
-int4 operator/(int Lhs, const int4& Rhs);
-#endif // CS_PLEB_NOTATION
+int4 operator+(int aLhs, const int4& aRhs);
+int4 operator-(int aLhs, const int4& aRhs);
+int4 operator*(int aLhs, const int4& aRhs);
 
 #endif // !GEODESUKA_CORE_MATH_INT4_H
