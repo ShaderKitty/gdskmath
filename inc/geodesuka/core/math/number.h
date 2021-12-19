@@ -11,4 +11,10 @@
 
 #include "number/constants.h"
 
+namespace geodesuka::core::math {
+	typedef uint natural;
+	typedef int integer;
+	typedef float real;
+}
+
 #endif // !GEODESUKA_CORE_MATH_NUMBER_H

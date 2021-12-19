@@ -9,21 +9,18 @@
 short2& short2::operator=(short aRhs) {
 	this->x = aRhs;
 	this->y = aRhs;
-	this->z = aRhs;
 	return *this;
 }
 
 short2& short2::operator=(const short2& aRhs) {
 	this->x = aRhs.x;
 	this->y = aRhs.y;
-	this->z = aRhs.z;
 	return *this;
 }
 
 short2& short2::operator=(short2&& aRhs) noexcept {
 	this->x = aRhs.x;
 	this->y = aRhs.y;
-	this->z = aRhs.z;
 	return *this;
 }
 
@@ -36,23 +33,23 @@ short& short2::operator[](int aIndex) {
 }
 
 short2 short2::operator-() const {
-	return short2(-this->x, -this->y, -this->z);
+	return short2(-this->x, -this->y);
 }
 
 short2 short2::operator+(short aRhs) const {
-	return short2(this->x + aRhs, this->y + aRhs, this->z + aRhs);
+	return short2(this->x + aRhs, this->y + aRhs);
 }
 
 short2 short2::operator+(const short2& aRhs) const {
-	return short2(this->x + aRhs.x, this->y + aRhs.y, this->z + aRhs.z);
+	return short2(this->x + aRhs.x, this->y + aRhs.y);
 }
 
 short2 short2::operator-(short aRhs) const {
-	return short2(this->x - aRhs, this->y - aRhs, this->z - aRhs);
+	return short2(this->x - aRhs, this->y - aRhs);
 }
 
 short2 short2::operator-(const short2& aRhs) const {
-	return short2(this->x - aRhs.x, this->y - aRhs.y, this->z - aRhs.z);
+	return short2(this->x - aRhs.x, this->y - aRhs.y);
 }
 
 short2& short2::operator+=(short aRhs) {
@@ -76,11 +73,11 @@ short2& short2::operator-=(const short2& aRhs) {
 }
 
 short2 short2::operator*(short aRhs) const {
-	return short2(this->x * aRhs, this->y * aRhs, this->z * aRhs);
+	return short2(this->x * aRhs, this->y * aRhs);
 }
 
 short2 short2::operator/(short aRhs) const {
-	return short2(this->x / aRhs, this->y / aRhs, this->z / aRhs);
+	return short2(this->x / aRhs, this->y / aRhs);
 }
 
 short2& short2::operator*=(short aRhs) {
@@ -94,7 +91,7 @@ short2& short2::operator/=(short aRhs) {
 }
 
 short short2::operator*(const short2& aRhs) const {
-	return (this->x * aRhs.x + this->y * aRhs.y + this->z * aRhs.z);
+	return (this->x * aRhs.x + this->y * aRhs.y);
 }
 
 short short2::operator^(const short2& aRhs) const {
@@ -106,7 +103,7 @@ short2 operator+(short aLhs, const short2& aRhs) {
 }
 
 short2 operator-(short aLhs, const short2& aRhs) {
-	return short2(aLhs - aRhs.x, aLhs - aRhs.y, aLhs - aRhs.z);
+	return short2(aLhs - aRhs.x, aLhs - aRhs.y);
 }
 
 short2 operator*(short aLhs, const short2& aRhs) {

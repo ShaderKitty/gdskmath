@@ -26,4 +26,16 @@
 
 #include "matrix/multiply.h"
 
+namespace geodesuka::core::math {
+	typedef float2x2 real2x2;
+	typedef float2x3 real2x3;
+	typedef float2x4 real2x4;
+	typedef float3x2 real3x2;
+	typedef float3x3 real3x3;
+	typedef float3x4 real3x4;
+	typedef float4x2 real4x2;
+	typedef float4x3 real4x3;
+	typedef float4x4 real4x4;
+}
+
 #endif // !GEODESUKA_CORE_MATH_MATRIX_H
