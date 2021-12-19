@@ -18,32 +18,32 @@ union int3 {
 	int3() : x(0u), y(0u), z(0u) {}
 	int3(int A) : x(A), y(A), z(A) {}
 	int3(int X, int Y, int Z) : x(X), y(Y), z(Z) {}
-	
+
 	// Vector Space Stuff.
-	int3&	operator=(int aRhs);
-	int3&	operator=(const int3& aRhs);
-	int3&	operator=(int3&& aRhs) noexcept;
+	int3& operator=(int aRhs);
+	int3& operator=(const int3& aRhs);
+	int3& operator=(int3&& aRhs) noexcept;
 
 	// Access
-	int		operator[](int aIndex) const;
-	int&	operator[](int aIndex);
+	int operator[](int aIndex) const;
+	int& operator[](int aIndex);
 
 	// Vector addition and subtraction.
-	int3	operator-() const;
-	int3	operator+(int aRhs) const;
-	int3	operator+(const int3& aRhs) const;
-	int3	operator-(int aRhs) const;
-	int3	operator-(const int3& aRhs) const;
-	int3&	operator+=(int aRhs);
-	int3&	operator+=(const int3& aRhs);
-	int3&	operator-=(int aRhs);
-	int3&	operator-=(const int3& aRhs);
+	int3 operator-() const;
+	int3 operator+(int aRhs) const;
+	int3 operator+(const int3& aRhs) const;
+	int3 operator-(int aRhs) const;
+	int3 operator-(const int3& aRhs) const;
+	int3& operator+=(int aRhs);
+	int3& operator+=(const int3& aRhs);
+	int3& operator-=(int aRhs);
+	int3& operator-=(const int3& aRhs);
 
 	// Scalar multiplication & division.
-	int3	operator*(int aRhs) const;
-	int3	operator/(int aRhs) const;
-	int3&	operator*=(int aRhs);
-	int3&	operator/=(int aRhs);
+	int3 operator*(int aRhs) const;
+	int3 operator/(int aRhs) const;
+	int3& operator*=(int aRhs);
+	int3& operator/=(int aRhs);
 
 
 	// Dot Product

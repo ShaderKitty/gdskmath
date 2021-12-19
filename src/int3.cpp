@@ -96,16 +96,12 @@ int int3::operator*(const int3& aRhs) const {
 }
 
 int3 int3::operator^(const int3& aRhs) const {
-	return int3();
+	return int3(
+		this->y * aRhs.z - this->z * aRhs.y,
+		this->z * aRhs.x - this->x * aRhs.z,
+		this->x * aRhs.y - this->y * aRhs.x
+	);
 }
-
-//int3 int3::operator^(const int3& aRhs) const {
-//	return int3(
-//		this->y * Rhs.z - this->z * Rhs.y,
-//		this->z * Rhs.x - this->x * Rhs.z,
-//		this->x * Rhs.y - this->y * Rhs.x
-//	);
-//}
 
 int3 operator+(int aLhs, const int3& aRhs) {
 	return aRhs + aLhs;
